@@ -12,6 +12,21 @@ dataset = torchvision.datasets.StanfordCars(".", download=True)
 But per the [docs](https://pytorch.org/vision/main/generated/torchvision.datasets.StanfordCars.html) and [`pytorch/vision#7545`](https://github.com/pytorch/vision/issues/7545), the hosting site has been broken for some time.
 
 So, the data can be cloned from here instead:
+```
+git clone https://github.com/jhpohovey/StanfordCars.git
+```
+and can be used as follows:
+```
+import torch
+import torchvision
+import matplotlib.pyplot as plt
+
+dataset = torchvision.datasets.StanfordCars(root="./StanfordCars", download=True)
+
+im = dataset[0][0]
+plt.figure(figsize=(20,20))
+plt.imshow(im)
+```
 
 The structure of the dataset follows the above linked issue:
 ```
