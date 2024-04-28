@@ -2,6 +2,8 @@
 
 The Stanford Cars dataset was proposed by Krause et. al in *3D Object Representations for Fine-Grained Categorization*. The citation is at the bottom of this document. 
 
+It seems that most online resources, e.g., [1](https://github.com/sigopt/stanford-car-classification), [2](https://github.com/cyizhuo/Stanford-Cars-dataset), [3](https://github.com/nguyentruonglau/stanford-cars), [4](https://github.com/kimx3314/Stanford-Cars-Dataset-Vehicle-Recognition/tree/master) are either broken or incomplete. Downloading from the [kaggle](https://www.kaggle.com/datasets/jessicali9530/stanford-cars-dataset) is one approach, but this doesn't include test set annotation. 
+
 Originally, this dataset could be loaded from the torchvision library using the following line:
 ```
 dataset = torchvision.datasets.StanfordCars(".", download=True)
