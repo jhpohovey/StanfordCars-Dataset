@@ -14,6 +14,7 @@ But per the [docs](https://pytorch.org/vision/main/generated/torchvision.dataset
 So, the data can be cloned from here instead:
 ```
 git clone https://github.com/jhpohovey/StanfordCars.git
+mv StanfordCars/stanford_cars ./stanford_cars
 ```
 and can be used as follows:
 ```
@@ -21,7 +22,8 @@ import torch
 import torchvision
 import matplotlib.pyplot as plt
 
-dataset = torchvision.datasets.StanfordCars(root="./StanfordCars", download=True)
+# assumning the `stanford_cars` directory exists at this directory level
+dataset = torchvision.datasets.StanfordCars(root="./", download=True)
 
 im = dataset[0][0]
 plt.figure(figsize=(20,20))
